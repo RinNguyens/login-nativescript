@@ -1,0 +1,18 @@
+<StackLayout>
+    <GridLayout class="verify-top" rows="auto" colums="*">
+        <Image src="~/images/Icons/logo.png" height="50" marginBottom="50" class="logo"></Image>
+    </GridLayout>
+    <GridLayout rows="*,auto" colums="auto">
+        <GridLayout row="0" rows="auto,auto">
+            <Label text="Thank you for visiting our site" marginBottom="40" row="0" class="text-center verify-title"></Label>
+
+            <Label row="1" textWrap="true" class="body text-left" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></Label>
+        </GridLayout>
+        <GridLayout class="center" row="1" rows="auto" columns="auto,auto" marginBottom="20">
+            <Label col="0" text="Already have an account? " class="text-center txt-blue"></Label>
+            <Label col="1" text="Sign in" (tap)="signin()" class="bolds text-center txt-blue"></Label>
+        </GridLayout>
+    </GridLayout>
+
+
+</StackLayout>

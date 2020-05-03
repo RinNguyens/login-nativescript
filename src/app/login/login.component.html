@@ -1,0 +1,102 @@
+<FlexboxLayout class="page">
+    <StackLayout class="form">
+        <Image class="logo" src="~/images/Icons/logo.png"></Image>
+        <Label class="header" text="LOG IN WITH YOUR ACCOUNT" fontSize="18"
+            color="blue"></Label>
+        <FlexboxLayout class="social-top">
+            <Image class="social" src="~/images/Icons/google.png" col="0" row="0">
+            </Image>
+            <Image class="social" src="~/images/Icons/facebook.png" col="1" row="0">
+            </Image>
+            <Image class="social" src="~/images/Icons/yahoo.png" col="2" row="0">
+            </Image>
+        </FlexboxLayout>
+        <Label text="--OR--" marginTop="15" marginBottom="15"
+            textAlignment="center" color="blue" fontWeight="400"></Label>
+        <Label text="SIGN IN WITH YOUR EMAIL" textAlignment="center"
+            fontWeight="400" fontSize="18" color="blue" marginBottom="10">
+        </Label>
+        <GridLayout rows="auto, auto, auto">
+            <StackLayout row="0" class="input-field" width="100%">
+                <AbsoluteLayout>
+                    <TextField zIndex="99" (focus)="animatedAll()"
+                        marginTop="10" class="-border radius" width="90%">
+                    </TextField>
+                    <Label #target zIndex="1" backgroundColor="white" top="22"
+                        left="20" marginLeft="15" text="Enter your email address"
+                        class="txt-blue"></Label>
+                </AbsoluteLayout>
+            </StackLayout>
+            <StackLayout row="1" columns="*,auto" class="input-field"
+                width="auto">
+                <AbsoluteLayout>
+                    <TextField col="0" zIndex="99" (focus)="animatedPass()"
+                        class="-border radius" width="90%" secure="true"
+                        marginTop="10">
+                    </TextField>
+                    <Image col="1" src="~/images/Icons/icon__eye.png" width="20"
+                        top="25" left="280"></Image>
+                    <Label #pass zIndex="1" id="pass" backgroundColor="white"
+                        top="22" marginLeft="15" left="20" text="Enter your password"
+                        class="txt-blue">
+                    </Label>
+                </AbsoluteLayout>
+            </StackLayout>
+            <StackLayout row="2" *ngIf="!isLoggingIn" class="input-field">
+                <AbsoluteLayout>
+                    <TextField *ngIf="!isLoggingIn" col="0" zIndex="99"
+                        #confirmPassword (focus)="animatedPassConfig()"
+                        class="-border radius" width="90%" secure="true"
+                        marginTop="10">
+                    </TextField>
+                    <Image col="1" src="~/images/Icons/icon__eye.png" width="20"
+                        top="25" left="280"></Image>
+                    <Label #passConfig zIndex="1" id="pass"
+                        backgroundColor="white" marginLeft="15" top="22" left="20"
+                        text="Re-enter your password" returnKeyType="done"
+                        class="txt-blue">
+                    </Label>
+                </AbsoluteLayout>
+            </StackLayout>
+
+        </GridLayout>
+        <Label *ngIf="!isLoggingIn" class="text-center" marginTop="10">
+            <FormattedString>
+                <Span text="By click 'Create Account,' you"></Span>
+                <Span text=" "></Span>
+            </FormattedString>
+        </Label>
+        <Label *ngIf="!isLoggingIn" class="text-center">
+            <FormattedString>
+                <Span text="agree to accept our "></Span>
+                <Span text="Terms of Services" class="bolds"></Span>
+            </FormattedString>
+        </Label>
+        <Label *ngIf="!isLoggingIn" class="text-center">
+            <FormattedString>
+                <Span text="and to our "></Span>
+                <Span text="Privacy Policy" class="bolds"></Span>
+            </FormattedString>
+        </Label>
+
+        <Button [text]="isLoggingIn ? 'Sign In' : 'CREATE ACCOUNT'"
+            [isEnabled]="!processing" (tap)="submit()"
+            class="btn btn-primary m-t-20 -rounded-sm"
+            nsRouterLink="/verify-email"
+        >
+        </Button>
+        <Label *ngIf="isLoggingIn" text="Forgot your password?"
+            class="forgot-pass" (tap)="forgotPassword()">
+        </Label>
+    </StackLayout>
+
+    <Label class="login-label sign-up-label" (tap)="toggleForm()">
+        <FormattedString>
+            <Span class="none-bold"
+                [text]="isLoggingIn ? 'Don’t have an account yet? ' : 'Already have an account? '">
+            </Span>
+            <Span [text]="isLoggingIn ? 'Create an account' : 'Sign in'"
+                class="bold"></Span>
+        </FormattedString>
+    </Label>
+</FlexboxLayout>

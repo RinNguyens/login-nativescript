@@ -1,0 +1,50 @@
+.verify-top {
+    horizontal-align: left;
+    margin-top: 20;
+    margin-left: 20;
+}
+.verify-title {
+    font-size: 20;
+    font-weight: 400;
+    color: blue;
+    margin-top: 20;
+}
+.verify-description {
+    margin-top: 30;
+    font-size: 15;
+    color: blue;
+}
+.txt-green {
+    color: green;
+}
+.bold {
+    font-weight: 500;
+    font-size: 15;
+    color: blue;
+}
+.bolds {
+    text-decoration: underline;
+    font-weight: 600;
+}
+.btn {
+    text-transform: uppercase;
+}
+.txt-blue {
+    color: blue;
+    font-size: 16;
+}
+.bd-color {
+    border-color: blue;
+}
+.pd-x {
+    padding-left: 5;
+    padding-right: 10;
+}
+.body {
+    width: 300;
+    font-size: 15;
+    color: blue;
+}
+.center {
+    horizontal-align: center;
+}

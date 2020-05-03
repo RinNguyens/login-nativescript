@@ -1,0 +1,28 @@
+.verify-top {
+    horizontal-align: left;
+    margin-top: 20;
+    margin-left: 20;
+}
+.verify-title {
+    font-size: 18;
+    font-weight: 400;
+    color: blue;
+    margin-top: 20;
+}
+.verify-description {
+    margin-top: 30;
+    font-size: 15;
+    color: blue;
+}
+.txt-green {
+    color: green;
+}
+.bold {
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 15;
+    color: blue;
+}
+.btn {
+    text-transform: uppercase;
+}

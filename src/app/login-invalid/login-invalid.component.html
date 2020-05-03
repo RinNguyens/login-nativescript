@@ -1,0 +1,34 @@
+<StackLayout>
+    <GridLayout class="verify-top" rows="auto" colums="*">
+        <Image src="~/images/Icons/logo.png" height="50" marginBottom="50" class="logo"></Image>
+
+    </GridLayout>
+    <GridLayout rows="*,auto" colums="auto">
+        <GridLayout row="0" rows="auto,auto,auto, auto">
+            <Image src="~/images/Icons/Group.png" height="80" row="0"></Image>
+            <Label text="Invalid email verification link" row="1" class="text-center verify-title"></Label>
+            <StackLayout row="2" class="verify-description">
+                <Label text="Either you have verified your email or the" class="text-center"></Label>
+                <Label text="link has alright expired. Please enter your" class="text-center"></Label>
+                <Label text="email andwe'll send you a new one." class="text-center"></Label>
+            </StackLayout>
+            <StackLayout row="3" width="100%" marginTop="40" >
+                <AbsoluteLayout>
+                    <TextField zIndex="99" (focus)="animatedEmail()" class="-border -rounded-sm bd-color" paddingLeft="20" width="90%" ></TextField>
+                    <Label #email zIndex="1" backgroundColor="white" top="15" left="20" marginLeft="15" text="Enter your email address" class="txt-blue pd-x"></Label>
+                </AbsoluteLayout>
+            </StackLayout>
+        </GridLayout>
+        <GridLayout row="1" rows="auto,auto" marginBottom="20">
+            <Button row="0" text="resend verification email" class="btn -rounded-sm -primary"></Button>
+            <Label row="1"class="text-center bold" marginBottom="20">
+                <FormattedString>
+                    <Span text="Already have an account ? "></Span>
+                    <Span text="Sign in" class="bolds"></Span>
+                </FormattedString>
+            </Label>
+        </GridLayout>
+    </GridLayout>
+
+
+</StackLayout>

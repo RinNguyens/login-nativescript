@@ -1,0 +1,29 @@
+<StackLayout>
+    <GridLayout class="verify-top" rows="auto" colums="*">
+        <Image src="~/images/Icons/logo.png" height="50" marginBottom="50" class="logo"></Image>
+
+    </GridLayout>
+    <GridLayout rows="*,auto" colums="auto">
+        <GridLayout row="0" rows="auto,auto,auto">
+            <Image src="~/images/Icons/Mail.png" height="80" row="0"></Image>
+            <Label text="Please verify your email" row="1" class="text-center verify-title"></Label>
+            <StackLayout row="2" class="verify-description">
+                <Label text="Just one more steps..." class="text-center"></Label>
+                <Label text="Please click the link in the email we sent to" class="text-center"></Label>
+                <Label class="text-center">
+                    <FormattedString>
+                        <Span class="txt-green" text="migrated@gmail.com"></Span>
+                        <Span text="to verify your email"></Span>
+                    </FormattedString>
+                </Label>
+                <Label class="text-center" text="Don't forget to check your spam folder."></Label>
+            </StackLayout>
+        </GridLayout>
+        <GridLayout row="1" rows="auto,auto" marginBottom="20">
+            <Label row="0" text="Didn't receive our email ?" class="bold text-center" marginBottom="20"></Label>
+            <Button row="1" text="back to sign in" class="btn -rounded-sm -primary"></Button>
+        </GridLayout>
+    </GridLayout>
+
+
+</StackLayout>
